@@ -1,7 +1,7 @@
 {
-  "name": "accoutrement-pseudo-elements",
+  "name": "accoutrement-pseudo",
   "version": "1.0.0",
-  "homepage": "https://github.com/oddbird/accoutrement-pseudo-elements",
+  "homepage": "https://github.com/oddbird/accoutrement-pseudo",
   "authors": [
     "Eric M. Suzanne"
   ],
@@ -17,7 +17,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ]
 }
