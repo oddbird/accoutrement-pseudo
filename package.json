@@ -1,6 +1,6 @@
 {
-  "name": "accoutrement-pseudo-elements",
-  "version": "1.0.1",
+  "name": "accoutrement-pseudo",
+  "version": "1.0.2",
   "description": "Sass helpers for psuedo elements",
   "homepage": "https://github.com/oddbird/accoutrement-pseudo",
   "repository": {
@@ -9,10 +9,24 @@
   },
   "author": "Eric M Suzanne <eric@oddbird.net>",
   "license": "MIT",
+  "keywords": [
+    "sass",
+    "accoutrement",
+    "toolkit",
+    "pseudo-elements",
+    "eyeglass-module"
+  ],
+  "eyeglass": {
+    "exports": "eyeglass-exports.js"
+  },
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
   "bugs": {
     "url": "https://github.com/oddbird/accoutrement-pseudo/issues"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4",
+    "sass-true": "^2.0.2"
   }
 }

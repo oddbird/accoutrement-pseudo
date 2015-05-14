@@ -29,11 +29,12 @@
 // Wrap Content
 // ------------
 @mixin wrap-content(
-  $content: "“" "”"
+  $content: '“' '”'
 ) {
   $_before: nth($content, 1);
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: $_before;
     @content;
   }

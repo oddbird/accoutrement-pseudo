@@ -1,0 +1,84 @@
+// Arrow Tests
+// ===========
+
+@import '../../node_modules/sass-true/sass/true';
+@import '../../sass/pseudo-elements';
+
+@include test-module('before [mixin]') {
+  @include test('Generate and style pseudo-element') {
+    @include assert('Content is generated') {
+      @include input {
+        @include before('hello world') {
+          background: #fcc;
+        }
+      }
+
+      @include expect {
+        &:before {
+          content: "hello world";
+          background: #fcc;
+        }
+      }
+    }
+  }
+}
+
+@include test-module('after [mixin]') {
+  @include test('Generate and style pseudo-element') {
+    @include assert('Content is generated') {
+      @include input {
+        @include after('goodbye world') {
+          background: #fcc;
+        }
+      }
+
+      @include expect {
+        &:after {
+          content: "goodbye world";
+          background: #fcc;
+        }
+      }
+    }
+  }
+}
+
+@include test-module('wrap-content [mixin]') {
+  @include test('Generate default wrappers') {
+    @include assert('Smart quotes are generated and styled') {
+      @include input {
+        @include wrap-content {
+          color: #fcc;
+        }
+      }
+
+      @include expect {
+        &:before,
+        &:after {
+          content: "“";
+          color: #fcc;
+        }
+
+        &:after {
+          content: "”";
+        }
+      }
+    }
+  }
+
+  @include test('Generate identical wrappers') {
+    @include assert('Identical bullets are generated and styled') {
+      @include input {
+        @include wrap-content('•') {
+          color: #fcc;
+        }
+      }
+
+      @include expect {
+        &:before,
+        &:after {
+          content: "•";
+          color: #fcc;
+        }
+      }
+    }
+  }}
